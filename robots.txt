@@ -1,0 +1,41 @@
+# Snow Day Calculator - robots.txt
+# https://snowday-predictor.ca
+
+# Allow all search engines to index everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://snowday-predictor.ca/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Block AI training bots if desired (uncomment to enable)
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: ChatGPT-User
+# Disallow: /
+
+# User-agent: CCBot
+# Disallow: /
