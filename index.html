@@ -362,6 +362,61 @@
             --glass-border: rgba(255, 255, 255, 0.12);
         }
 
+        /* Navigation Bar */
+        .nav-header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 0.8rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--snow-white);
+        }
+
+        /* Adjust main container to account for fixed nav */
+        .container {
+            padding-top: 80px;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -1108,6 +1163,18 @@
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-header">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">❄️ Snow Day Predictor</a>
+            <div class="nav-links">
+                <a href="#calculator" class="nav-link">Calculator</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#blog" class="nav-link">Articles</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+        </div>
+    </nav>
     <!-- Snowfall Effect -->
     <div class="snowflakes" id="snowflakes"></div>
 
@@ -1126,7 +1193,7 @@
 
         <main>
             <!-- Input Card -->
-            <div class="glass-card">
+            <div class="glass-card" id="calculator">
                 <div class="input-section">
                     <div class="input-group">
                         <label class="input-label" for="postal-code">Enter Your Postal/ZIP Code</label>
