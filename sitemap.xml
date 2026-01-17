@@ -5,62 +5,146 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
-  <!-- Main Page - Highest Priority -->
+  <!-- ============================================ -->
+  <!-- MAIN PAGES - HIGHEST PRIORITY -->
+  <!-- ============================================ -->
   <url>
     <loc>https://snowday-predictor.ca/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-17</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://snowday-predictor.ca/og-image.jpg</image:loc>
-      <image:title>Snow Day Predictor - Halton Region School Closures</image:title>
-      <image:caption>Free snow day prediction tool for Halton Region showing real-time probability of school closure for HDSB and HCDSB</image:caption>
+      <image:title>Snow Day Predictor - Free School Closure Predictions for US & Canada</image:title>
     </image:image>
   </url>
   
-  <!-- FAQ Section -->
+  <!-- SCHOOL DISTRICTS DIRECTORY - MAIN HUB -->
   <url>
-    <loc>https://snowday-predictor.ca/#faq</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://snowday-predictor.ca/schools/</loc>
+    <lastmod>2026-01-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
   
-  <!-- Blog Section -->
-  <!-- Blog Articles -->
-  <url>
-    <loc>https://snowday-predictor.ca/articles/hdsb-decision-process.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://snowday-predictor.ca/articles/historical-trends.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://snowday-predictor.ca/articles/snow-day-activities.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- ============================================ -->
+  <!-- CANADA - PROVINCES (ALL CREATED) -->
+  <!-- ============================================ -->
+  <url><loc>https://snowday-predictor.ca/schools/ontario/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/quebec/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/british-columbia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/alberta/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/manitoba/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/nova-scotia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/saskatchewan/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-brunswick/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/newfoundland/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/pei/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
   
-  <!-- About Page -->
-  <url>
-    <loc>https://snowday-predictor.ca/about.html</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- ONTARIO SCHOOL BOARDS (CREATED) -->
+  <url><loc>https://snowday-predictor.ca/schools/ontario/hdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/tdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.95</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/pdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/yrdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/ddsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/ocdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/hwdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/wrdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/tvdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/dsbn/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/hcdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/tcdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/dpcdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ontario/ycdsb/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
   
-  <!-- Calculator Section -->
-  <url>
-    <loc>https://snowday-predictor.ca/#calculator</loc>
-    <lastmod>2026-01-15</lastmod>
-    <changefreq>hourly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- ============================================ -->
+  <!-- USA - ALL STATES (CREATED & PLANNED) -->
+  <!-- ============================================ -->
+  <!-- HIGH PRIORITY SNOW STATES - CREATED -->
+  <url><loc>https://snowday-predictor.ca/schools/new-york/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.92</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/massachusetts/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/michigan/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ohio/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/pennsylvania/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/illinois/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/minnesota/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/wisconsin/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/colorado/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/indiana/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/connecticut/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-jersey/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/iowa/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.82</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/maine/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/vermont/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-hampshire/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/maryland/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/virginia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/washington/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  
+
+  <!-- ADDITIONAL SNOW STATES (PLANNED) -->
+  <url><loc>https://snowday-predictor.ca/schools/maryland/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/virginia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/west-virginia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/washington/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/oregon/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/alaska/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/montana/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/wyoming/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/idaho/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/utah/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/north-dakota/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/south-dakota/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/nebraska/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/kansas/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/missouri/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/kentucky/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/tennessee/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/north-carolina/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/rhode-island/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/delaware/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/oklahoma/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/arkansas/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/texas/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.75</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-mexico/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/arizona/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/nevada/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/california/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/georgia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/south-carolina/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.65</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/alabama/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/mississippi/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/louisiana/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  
+  <!-- MAJOR CITY DISTRICTS (PLANNED) -->
+  <url><loc>https://snowday-predictor.ca/schools/new-york/nyc-doe/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.92</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-york/buffalo/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-york/rochester/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/new-york/syracuse/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/massachusetts/boston/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/massachusetts/worcester/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/michigan/detroit/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/michigan/grand-rapids/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ohio/cleveland/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ohio/columbus/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/ohio/cincinnati/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/pennsylvania/philadelphia/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/pennsylvania/pittsburgh/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/illinois/chicago/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.92</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/minnesota/minneapolis/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/wisconsin/milwaukee/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.85</priority></url>
+  <url><loc>https://snowday-predictor.ca/schools/colorado/denver/</loc><lastmod>2026-01-17</lastmod><changefreq>daily</changefreq><priority>0.88</priority></url>
+  
+  <!-- ============================================ -->
+  <!-- CONTENT PAGES -->
+  <!-- ============================================ -->
+  <url><loc>https://snowday-predictor.ca/about.html</loc><lastmod>2026-01-17</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://snowday-predictor.ca/privacy.html</loc><lastmod>2026-01-17</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://snowday-predictor.ca/#faq</loc><lastmod>2026-01-17</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  
+  <!-- BLOG ARTICLES -->
+  <url><loc>https://snowday-predictor.ca/articles/hdsb-decision-process.html</loc><lastmod>2026-01-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/articles/historical-trends.html</loc><lastmod>2026-01-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://snowday-predictor.ca/articles/snow-day-activities.html</loc><lastmod>2026-01-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

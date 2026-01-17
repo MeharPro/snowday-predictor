@@ -1,41 +1,64 @@
-# Snow Day Calculator - robots.txt
-# https://snowday-predictor.ca
+# Snow Day Predictor - Robots.txt
+# Maximum SEO Configuration for US and Canada School Coverage
 
-# Allow all search engines to index everything
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Allow all crawlers full access to school pages
+Allow: /schools/
+Allow: /schools/ontario/
+Allow: /schools/new-york/
+Allow: /schools/massachusetts/
+Allow: /schools/michigan/
+Allow: /schools/ohio/
+Allow: /schools/illinois/
+Allow: /schools/pennsylvania/
+Allow: /schools/wisconsin/
+Allow: /schools/minnesota/
+Allow: /schools/colorado/
+
+# Allow article crawling
+Allow: /articles/
+
+# Sitemap Location
 Sitemap: https://snowday-predictor.ca/sitemap.xml
 
-# Crawl-delay for polite crawling (optional)
+# Crawl-delay (optional, be nice to servers)
 Crawl-delay: 1
 
 # Specific bot instructions
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 1
 
 User-agent: DuckDuckBot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Baiduspider
 Allow: /
+Crawl-delay: 2
 
 User-agent: YandexBot
 Allow: /
+Crawl-delay: 2
 
-# Block AI training bots if desired (uncomment to enable)
-# User-agent: GPTBot
-# Disallow: /
+# Disallow non-essential files
+Disallow: /.git/
+Disallow: /*.py$
+Disallow: /package.json
+Disallow: /package-lock.json
 
-# User-agent: ChatGPT-User
-# Disallow: /
-
-# User-agent: CCBot
-# Disallow: /
+# Host directive
+Host: https://snowday-predictor.ca
