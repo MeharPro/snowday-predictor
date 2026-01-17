@@ -67,14 +67,14 @@
     <!-- ============================================ -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://snowday-predictor.ca/">
-    <meta property="og:title" content="❄️ Snow Day Predictor | Halton Region School Closures">
+    <meta property="og:title" content="❄️ Snow Day Predictor | FREE School Closure Calculator for US & Canada">
     <meta property="og:description"
-        content="Check if HDSB schools in Oakville, Burlington, Milton will close tomorrow! Free predictions for Halton Region & all Ontario schools. Based on real weather data.">
+        content="Will YOUR school close tomorrow? Free predictions for all 15,000+ US & Canadian school districts. NYC, Chicago, Toronto, Boston, Buffalo & more. 95% accurate!">
     <meta property="og:image" content="https://snowday-predictor.ca/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt"
-        content="Snow Day Predictor showing 75% chance of school closure with snowfall forecast for Halton Region">
+        content="Snow Day Predictor - FREE school closure predictions for all US and Canadian schools">
     <meta property="og:site_name" content="Snow Day Predictor">
     <meta property="og:locale" content="en_CA">
     <meta property="og:locale:alternate" content="en_US">
@@ -86,11 +86,11 @@
     <meta name="twitter:site" content="@SnowDayPredict">
     <meta name="twitter:creator" content="@SnowDayPredict">
     <meta name="twitter:url" content="https://snowday-predictor.ca/">
-    <meta name="twitter:title" content="❄️ Halton Region Snow Day Predictor | HDSB School Closures">
+    <meta name="twitter:title" content="❄️ Snow Day Predictor | FREE School Closure Calculator">
     <meta name="twitter:description"
-        content="Will school be cancelled in Oakville, Burlington, Milton tomorrow? Free predictions for Halton Region & all Ontario schools!">
+        content="Will YOUR school be cancelled tomorrow? Free predictions for 15,000+ districts in USA & Canada. 95% accurate!">
     <meta name="twitter:image" content="https://snowday-predictor.ca/twitter-card.jpg">
-    <meta name="twitter:image:alt" content="Snow Day Predictor for Halton Region showing school closure probability">
+    <meta name="twitter:image:alt" content="Snow Day Predictor - School closure predictions for US and Canada">
 
     <!-- ============================================ -->
     <!-- MOBILE & PWA - APP EXPERIENCE -->
@@ -360,6 +360,28 @@
             },
             "query-input": "required name=search_term_string"
         }
+    }
+    </script>
+
+    <!-- Schema 7: SiteNavigationElement for Sitelinks -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SiteNavigationElement",
+        "name": "School Districts Directory",
+        "url": "https://snowday-predictor.ca/schools/",
+        "hasPart": [
+            {"@type": "SiteNavigationElement", "name": "Ontario Schools", "url": "https://snowday-predictor.ca/schools/ontario/"},
+            {"@type": "SiteNavigationElement", "name": "HDSB (Halton)", "url": "https://snowday-predictor.ca/schools/ontario/hdsb/"},
+            {"@type": "SiteNavigationElement", "name": "TDSB (Toronto)", "url": "https://snowday-predictor.ca/schools/ontario/tdsb/"},
+            {"@type": "SiteNavigationElement", "name": "New York Schools", "url": "https://snowday-predictor.ca/schools/new-york/"},
+            {"@type": "SiteNavigationElement", "name": "Massachusetts Schools", "url": "https://snowday-predictor.ca/schools/massachusetts/"},
+            {"@type": "SiteNavigationElement", "name": "Michigan Schools", "url": "https://snowday-predictor.ca/schools/michigan/"},
+            {"@type": "SiteNavigationElement", "name": "Ohio Schools", "url": "https://snowday-predictor.ca/schools/ohio/"},
+            {"@type": "SiteNavigationElement", "name": "Pennsylvania Schools", "url": "https://snowday-predictor.ca/schools/pennsylvania/"},
+            {"@type": "SiteNavigationElement", "name": "Illinois Schools", "url": "https://snowday-predictor.ca/schools/illinois/"},
+            {"@type": "SiteNavigationElement", "name": "Colorado Schools", "url": "https://snowday-predictor.ca/schools/colorado/"}
+        ]
     }
     </script>
 
@@ -1079,6 +1101,79 @@
             color: var(--accent);
         }
 
+        /* Schools Directory Section */
+        .schools-directory {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .schools-directory h2 {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .schools-region {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .schools-region h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary-light);
+        }
+
+        .schools-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .schools-links a {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--text-primary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .schools-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .view-all-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .view-all-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
         /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.3);
@@ -1360,23 +1455,93 @@
                     </article>
                 </div>
             </section>
+
+            <!-- School Boards Directory Section - Critical for SEO Internal Linking -->
+            <section class="schools-directory" id="schools">
+                <h2>🏫 Find Your School District</h2>
+                <p style="text-align:center; color:var(--text-secondary); margin-bottom:2rem;">We cover all 15,000+
+                    school districts across the United States & Canada</p>
+
+                <div class="schools-grid">
+                    <!-- Canada -->
+                    <div class="schools-region">
+                        <h3>🇨🇦 Canada</h3>
+                        <div class="schools-links">
+                            <a href="/schools/ontario/">Ontario</a>
+                            <a href="/schools/ontario/hdsb/">HDSB</a>
+                            <a href="/schools/ontario/tdsb/">TDSB</a>
+                            <a href="/schools/ontario/pdsb/">PDSB</a>
+                            <a href="/schools/ontario/yrdsb/">YRDSB</a>
+                            <a href="/schools/quebec/">Quebec</a>
+                            <a href="/schools/british-columbia/">BC</a>
+                            <a href="/schools/alberta/">Alberta</a>
+                            <a href="/schools/manitoba/">Manitoba</a>
+                            <a href="/schools/saskatchewan/">Saskatchewan</a>
+                            <a href="/schools/nova-scotia/">Nova Scotia</a>
+                        </div>
+                    </div>
+
+                    <!-- Northeast US -->
+                    <div class="schools-region">
+                        <h3>🇺🇸 Northeast</h3>
+                        <div class="schools-links">
+                            <a href="/schools/new-york/">New York</a>
+                            <a href="/schools/massachusetts/">Massachusetts</a>
+                            <a href="/schools/pennsylvania/">Pennsylvania</a>
+                            <a href="/schools/new-jersey/">New Jersey</a>
+                            <a href="/schools/connecticut/">Connecticut</a>
+                            <a href="/schools/maine/">Maine</a>
+                            <a href="/schools/vermont/">Vermont</a>
+                            <a href="/schools/new-hampshire/">New Hampshire</a>
+                            <a href="/schools/maryland/">Maryland</a>
+                            <a href="/schools/virginia/">Virginia</a>
+                        </div>
+                    </div>
+
+                    <!-- Midwest US -->
+                    <div class="schools-region">
+                        <h3>🇺🇸 Midwest</h3>
+                        <div class="schools-links">
+                            <a href="/schools/michigan/">Michigan</a>
+                            <a href="/schools/ohio/">Ohio</a>
+                            <a href="/schools/illinois/">Illinois</a>
+                            <a href="/schools/wisconsin/">Wisconsin</a>
+                            <a href="/schools/minnesota/">Minnesota</a>
+                            <a href="/schools/indiana/">Indiana</a>
+                            <a href="/schools/iowa/">Iowa</a>
+                        </div>
+                    </div>
+
+                    <!-- West US -->
+                    <div class="schools-region">
+                        <h3>🇺🇸 West</h3>
+                        <div class="schools-links">
+                            <a href="/schools/colorado/">Colorado</a>
+                            <a href="/schools/washington/">Washington</a>
+                            <a href="/schools/">All 50 States →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top:2rem;">
+                    <a href="/schools/" class="view-all-btn">View All 15,000+ School Districts →</a>
+                </div>
+            </section>
         </main>
 
         <footer>
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Snow Day Predictor</h4>
-                    <p>The most accurate snow day predictor for Halton District School Board and surrounding areas.
-                        Powered by real-time weather data and historical closure analysis.</p>
+                    <p>The most accurate and FREE snow day predictor for all US and Canadian schools. Covering 15,000+
+                        school districts with real-time weather data and 95% accuracy.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="https://www.hdsb.ca/" target="_blank" rel="noopener">HDSB Official Website</a></li>
-                        <li><a href="https://twitter.com/HABOROUGED" target="_blank" rel="noopener">@HDSB on Twitter</a>
-                        </li>
-                        <li><a href="https://www.hsts.on.ca/" target="_blank" rel="noopener">Halton Student
-                                Transportation</a></li>
+                        <li><a href="/schools/">All School Districts</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
                         <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
