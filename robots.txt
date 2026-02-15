@@ -1,64 +1,11 @@
-# Snow Day Predictor - Robots.txt
-# Maximum SEO Configuration for US and Canada School Coverage
+# Snow Day Predictor robots.txt
 
 User-agent: *
 Allow: /
 
-# Allow all crawlers full access to school pages
-Allow: /schools/
-Allow: /schools/ontario/
-Allow: /schools/new-york/
-Allow: /schools/massachusetts/
-Allow: /schools/michigan/
-Allow: /schools/ohio/
-Allow: /schools/illinois/
-Allow: /schools/pennsylvania/
-Allow: /schools/wisconsin/
-Allow: /schools/minnesota/
-Allow: /schools/colorado/
-
-# Allow article crawling
-Allow: /articles/
-
-# Sitemap Location
-Sitemap: https://snowday-predictor.ca/sitemap.xml
-
-# Crawl-delay (optional, be nice to servers)
-Crawl-delay: 1
-
-# Specific bot instructions
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
-
-User-agent: DuckDuckBot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Baiduspider
-Allow: /
-Crawl-delay: 2
-
-User-agent: YandexBot
-Allow: /
-Crawl-delay: 2
-
-# Disallow non-essential files
+# Internal/dev content
 Disallow: /.git/
+Disallow: /battlesnake_code/
 Disallow: /*.py$
-Disallow: /package.json
-Disallow: /package-lock.json
 
-# Host directive
-Host: https://snowday-predictor.ca
+Sitemap: https://snowday-predictor.ca/sitemap.xml
