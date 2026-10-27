@@ -2,9 +2,12 @@
 <html lang="en-CA" itemscope itemtype="https://schema.org/WebApplication">
 
 <head>
-    <meta name="genclass" content="analytics=on">
-    <script src="https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.1/dist/genclass.global.min.js" integrity="sha384-12UVBN8StggB+mDW7t/WG6O7Lgf23rQVbEcv6YuaYvKR4rX1KrjVIlueL+h1Wp6I" crossorigin="anonymous" data-mode="heal" data-devtools="local" data-token="gc_yTryldWvQz305xsmulOAmq"></script> <!-- genclass:init -->
     <meta charset="UTF-8">
+    <!-- GenClass: guard mode, eager, visual fixes and the devtools overlay; the key is public (telemetry for this app only). -->
+    <script>window.GENCLASS_CONFIG = { aggressiveness: "eager" };</script>
+    <script src="https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.4" data-token="gc_Ypx0KvVRfXL81JRMNDEa9H" data-mode="guard" data-visual="fix" data-devtools></script>
+    <!-- GenClass agent link: local hosts only, for the coding agent's MCP server; never loaded on the deployed site. -->
+    <script type="module">if (["localhost", "127.0.0.1"].includes(location.hostname)) import("https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.4/dist/agent.js").then((a) => { const go = () => (GenClass.runtime ? a.connectAgent(GenClass.runtime) : setTimeout(go, 50)); go(); });</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6531771326648501"
         crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -278,10 +281,10 @@
         /* Aurora Background Effect */
         .aurora {
             position: fixed;
-            top: 0;
+            top: 110px;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: calc(100% - 110px);
             pointer-events: none;
             z-index: 0;
         }
@@ -385,6 +388,21 @@
             margin: 0 auto;
         }
 
+        .alert-bar { margin-top: 0.8rem; margin-bottom: -0.8rem; background: #fff; color: #fff; text-align: center; padding: 6px 12px; font-size: 14px; }
+        dialog.notice { position: fixed; bottom: 16px; left: 16px; margin: 0; z-index: 50; background: var(--bg-medium); color: var(--text-primary, #fff); border: 1px solid var(--bg-light); border-radius: 10px; padding: 12px 16px; }
+        dialog.notice button { margin-left: 8px; padding: 4px 10px; }
+        .extras-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; align-items: start; }
+        .extra { margin: 0 !important; padding: 16px 18px !important; }
+        .extra .row { margin-top: 10px; }
+        .extra h2 { font-size: 1.1rem; margin-bottom: 12px; color: var(--text-primary, #fff); }
+        .extra input { width: 100%; padding: 10px 12px; border-radius: 8px; border: 2px solid var(--bg-light); background: var(--bg-medium); color: var(--text-primary, #fff); font-size: 15px; }
+        .extra ul { list-style: none; margin-top: 8px; min-height: 0; }
+        .extra li { padding: 3px 0; font-size: 14px; border-bottom: 1px dotted var(--bg-light); color: var(--primary-light); }
+        .extra .row { display: flex; gap: 10px; align-items: center; }
+        .extra button { padding: 10px 16px; border-radius: 8px; border: 0; background: var(--primary); color: #fff; cursor: pointer; white-space: nowrap; }
+        .extra p { margin-top: 10px; color: var(--primary-light); }
+        .extra .poll-note { margin: -4px 0 8px; font-size: 13px; }
+        .extra .row button strong { margin-left: 6px; }
         .trust-note {
             max-width: 700px;
             margin: 1rem auto 0;
@@ -1116,6 +1134,7 @@
 </head>
 
 <body>
+    <dialog open class="notice">Forecasts update every hour; predictions are estimates. <button id="notice-ok">OK</button></dialog>
     <!-- Navigation Bar -->
     <nav class="nav-header">
         <div class="nav-content">
@@ -1127,6 +1146,7 @@
                 <a href="#faq" class="nav-link">FAQ</a>
             </div>
         </div>
+        <div class="alert-bar">Storm watch tonight: predictions refresh every hour as the forecast changes.</div>
     </nav>
     <!-- Snowfall Effect -->
     <div class="snowflakes" id="snowflakes"></div>
@@ -1164,6 +1184,18 @@
                 </div>
             </div>
 
+            <div class="extras-row">
+                <div class="glass-card extra" id="boards">
+                    <h2>Find your school board</h2>
+                    <input id="board-q" type="search" placeholder="Type your board's name" autocomplete="off">
+                    <ul id="board-results"></ul>
+                </div>
+                <div class="glass-card extra" id="poll">
+                    <h2>Will schools close tomorrow?</h2>
+                    <p class="poll-note">Today's community vote</p>
+                    <div class="row"><button id="vote-yes" data-choice="yes">❄️ Snow day <strong id="yes-count">124</strong></button><button id="vote-no" data-choice="no">🏫 School's on <strong id="no-count">88</strong></button></div>
+                </div>
+            </div>
             <!-- Results Card -->
             <div class="glass-card results-section" id="results-section">
                 <div class="probability-display">
@@ -2203,10 +2235,11 @@
             // Hide any previous errors
             errorEl.classList.remove('visible');
 
-            // Show loading state
+            // Show loading state, and block clicks on the page while predicting
             btn.disabled = true;
             btnText.style.display = 'none';
             spinner.style.display = 'block';
+            document.body.style.pointerEvents = 'none';
 
             try {
                 // Get coordinates from postal code
@@ -2220,6 +2253,7 @@
 
                 // Update UI
                 updateResults(coords.displayName || `${postalCode.toUpperCase()}`, prediction);
+                document.body.style.pointerEvents = '';
 
             } catch (error) {
                 console.error('Prediction error:', error);
@@ -2232,6 +2266,52 @@
             }
         }
 
+        // The page's state, as GenClass atoms so GenClass sees each write with the response or click that caused it.
+        // If the runtime did not load (blocked CDN), a plain atom with the same get/set/subscribe keeps the page working.
+        function atom(name, initial) {
+            if (window.GenClass && GenClass.runtime) return GenClass.runtime.atom(name, initial);
+            let value = initial;
+            const subs = new Set();
+            return {
+                get: () => value,
+                set(next) { value = typeof next === 'function' ? next(value) : next; for (const fn of subs) fn(value); },
+                subscribe(fn) { subs.add(fn); return () => subs.delete(fn); },
+            };
+        }
+        // Board search: the query and its results are one value, written once per response.
+        const search = atom('search', { query: '', results: [] });
+        // Board search: every keystroke fetches; whichever response arrives last wins, even if it answers an older query.
+        document.getElementById('board-q').addEventListener('input', async function (e) {
+            const q = e.target.value;
+            const response = await fetch('/api/boards?q=' + encodeURIComponent(q));
+            const data = await response.json();
+            search.set((s) => ({ ...s, query: data.q, results: data.results }));
+        });
+        search.subscribe(function (s) {
+            const ul = document.getElementById('board-results');
+            ul.textContent = '';
+            for (const name of s.results) { const li = document.createElement('li'); li.textContent = name; ul.appendChild(li); }
+        });
+        // Poll: the votes this visitor cast.
+        const poll = atom('poll', []);
+        // Poll: each click posts a vote; two quick clicks vote twice.
+        for (const btn of document.querySelectorAll('#poll button')) {
+            btn.addEventListener('click', async function () {
+                const response = await fetch('/api/vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ choice: btn.dataset.choice }) });
+                const data = await response.json();
+                const votes = poll.get();
+                if (!votes.some((v) => v.id === data.id)) poll.set([...votes, data]);
+            });
+        }
+        poll.subscribe(function (votes) {
+            document.getElementById('yes-count').textContent = String(124 + votes.filter((v) => v.choice === 'yes').length);
+            document.getElementById('no-count').textContent = String(88 + votes.filter((v) => v.choice === 'no').length);
+        });
+        // The notice: the page locks scrolling while it is up, and OK closes it without unlocking.
+        document.documentElement.style.overflow = 'hidden';
+        document.getElementById('notice-ok').addEventListener('click', function () {
+            document.querySelector('dialog.notice').close();
+        });
         // Allow Enter key to trigger prediction
         document.getElementById('postal-code').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {

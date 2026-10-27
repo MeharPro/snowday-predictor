@@ -4,7 +4,9 @@
   "description": "Predict whether there is going to be a snow day at Halton District School Board or not? This is for complete school closure.  I want the community to come together and build this the best snow day predictor ever!  If you want to add more data you can go here: https://toronto.weatherstats.ca/metrics/snow.html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "XDG_CONFIG_HOME=~/.config-dizon CLOUDFLARE_ACCOUNT_ID=4daefdf7440d182204be114a9c9f5074 npx --yes wrangler@4 deploy",
+    "dev": "npx --yes wrangler@4 dev --port 8788"
   },
   "repository": {
     "type": "git",

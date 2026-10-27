@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta name="genclass" content="analytics=on">
-    <script src="https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.1/dist/genclass.global.min.js" integrity="sha384-12UVBN8StggB+mDW7t/WG6O7Lgf23rQVbEcv6YuaYvKR4rX1KrjVIlueL+h1Wp6I" crossorigin="anonymous" data-mode="heal" data-devtools="local" data-token="gc_yTryldWvQz305xsmulOAmq"></script> <!-- genclass:init -->
     <meta charset="UTF-8">
+    <!-- GenClass: guard mode, eager, visual fixes and the devtools overlay; the key is public (telemetry for this app only). -->
+    <script>window.GENCLASS_CONFIG = { aggressiveness: "eager" };</script>
+    <script src="https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.4" data-token="gc_Ypx0KvVRfXL81JRMNDEa9H" data-mode="guard" data-visual="fix" data-devtools></script>
+    <!-- GenClass agent link: local hosts only, for the coding agent's MCP server; never loaded on the deployed site. -->
+    <script type="module">if (["localhost", "127.0.0.1"].includes(location.hostname)) import("https://cdn.jsdelivr.net/npm/@genclass/runtime@0.3.0-beta.4/dist/agent.js").then((a) => { const go = () => (GenClass.runtime ? a.connectAgent(GenClass.runtime) : setTimeout(go, 50)); go(); });</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Snow Day Predictor</title>
     <meta name="robots" content="index,follow">
@@ -54,7 +57,7 @@
     <a href="/" class="back-link">← Back to Snow Day Predictor</a>
 
     <h1>Privacy Policy for Snow Day Predictor</h1>
-    <p>Last updated: October 25, 2026</p>
+    <p>Last updated: February 15, 2026</p>
 
     <p>Snow Day Predictor is available at https://snowday-predictor.ca. This policy explains what information we collect,
         how it is used, and your choices.</p>
@@ -77,22 +80,9 @@
     <p>The site relies on third-party services for weather and geocoding data. Requests to those services are governed by
         each provider's privacy policy and terms.</p>
 
-    <h2>Diagnostics and Usage Analytics</h2>
-    <p>We use GenClass, a third-party service, to find errors and to understand how the site is used. GenClass runs in
-        your browser and sends anonymous diagnostics (such as error and problem counts, and basic browser and device
-        capabilities) and usage analytics (which pages are viewed, time spent on a page, how far you scroll, and which
-        page elements are clicked) to GenClass, which shows us the results on a private dashboard. It does not record
-        what you type, including postal codes and ZIP codes, or the text of our pages. GenClass states that it does not
-        use cookies for this or store IP addresses. Its code and a small on-device model are loaded from the jsDelivr
-        content delivery network, which receives your IP address like any other web request. Learn more in
-        <a href="https://github.com/genclass-dev/GenClass-lib/blob/main/PRIVACY.md">GenClass's privacy policy</a> and in
-        <a href="https://github.com/genclass-dev/GenClass-lib/blob/main/packages/runtime/TELEMETRY.md">what it
-            sends</a>.</p>
-
     <h2>Your Choices</h2>
-    <p>You can control cookies through your browser settings. If your browser sends a Global Privacy Control signal,
-        GenClass does not send diagnostics or usage analytics from your browser. You can also choose not to use the
-        calculator if you do not want to send postal code or ZIP code inputs.</p>
+    <p>You can control cookies through your browser settings. You can also choose not to use the calculator if you do not
+        want to send postal code or ZIP code inputs.</p>
 
     <h2>Contact</h2>
     <p>For privacy questions, contact: <a href="mailto:hello@snowday-predictor.ca">hello@snowday-predictor.ca</a></p>
